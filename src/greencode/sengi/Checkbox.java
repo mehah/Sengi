@@ -6,7 +6,7 @@ import greencode.jscript.ElementHandle;
 import greencode.jscript.Window;
 import greencode.jscript.elements.InputCheckboxElement;
 
-public class Checkbox extends InputCheckboxElement {
+public class Checkbox<T> extends InputCheckboxElement<T> {
 
 	protected Checkbox(Window window) {
 		super(window);
@@ -17,10 +17,10 @@ public class Checkbox extends InputCheckboxElement {
 		ElementHandle.dataTransfer(e, this);
 	}
 	
-	public static void checkByValue(Element[] es, String value) {
+	public static<T> void checkByValue(Element[] es, Object value) {
 		for (int i = -1; ++i < es.length;) {
 			final Element e = es[i];
-			final InputCheckboxElement c = e instanceof InputCheckboxElement ? (InputCheckboxElement) e : ElementHandle.cast(e, InputCheckboxElement.class);
+			final InputCheckboxElement<T> c = e instanceof InputCheckboxElement ? (InputCheckboxElement<T>) e : ElementHandle.cast(e, InputCheckboxElement.class);
 			es[i] = c;
 			
 			if(c.value().equals(value)) {
@@ -30,29 +30,29 @@ public class Checkbox extends InputCheckboxElement {
 		}
 	}
 	
-	public InputCheckboxElement checkByValue(String value) {
+	public InputCheckboxElement <T>checkByValue(String value) {
 		final String name = this.name();
-		InputCheckboxElement c = ElementHandle.cast(window.principalElement().querySelector("input[type=\"checkbox\"][name=\""+name+"\"][value=\""+value+"\"]"), InputCheckboxElement.class);
+		InputCheckboxElement<T> c = ElementHandle.cast(window.principalElement().querySelector("input[type=\"checkbox\"][name=\""+name+"\"][value=\""+value+"\"]"), InputCheckboxElement.class);
 		c.checked(true);		
 		return c;
 	}
 	
-	public InputCheckboxElement[] checkByValues(String[] value) {
+	public InputCheckboxElement<T>[] checkByValues(Object[] values) {
 		StringBuilder s = new StringBuilder();
 		
 		final String name = this.name();
 		
-		for (String v : value) {
+		for (Object v : values) {
 			if(s.length() > 0) s.append(",");
 			s.append("input[type=\"checkbox\"][name=\""+name+"\"][value=\""+v+"\"]");
 		}
 		
 		Element[] elements = window.principalElement().querySelectorAll(s.toString());
 		
-		InputCheckboxElement[] inputs = new InputCheckboxElement[elements.length];
+		InputCheckboxElement<T>[] inputs = new InputCheckboxElement[elements.length];
 		
 		for (int i = -1; ++i < elements.length;) {		
-			final InputCheckboxElement c = ElementHandle.cast(elements[i], InputCheckboxElement.class);
+			final InputCheckboxElement<T> c = ElementHandle.cast(elements[i], InputCheckboxElement.class);
 			c.checked(true);
 			
 			elements[i] = c;
