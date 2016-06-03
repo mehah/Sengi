@@ -3,9 +3,9 @@ package greencode.sengi.table;
 import java.util.ArrayList;
 import java.util.List;
 
-import greencode.jscript.Window;
-import greencode.jscript.elements.TDElement;
-import greencode.jscript.elements.TFootElement;
+import greencode.jscript.dom.Window;
+import greencode.jscript.dom.elements.TDElement;
+import greencode.jscript.dom.elements.TFootElement;
 import greencode.sengi.implementations.ElementEach;
 
 public class TFoot extends TFootElement{

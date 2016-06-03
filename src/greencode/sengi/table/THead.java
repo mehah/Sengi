@@ -3,9 +3,9 @@ package greencode.sengi.table;
 import java.util.ArrayList;
 import java.util.List;
 
-import greencode.jscript.Window;
-import greencode.jscript.elements.THElement;
-import greencode.jscript.elements.TheadElement;
+import greencode.jscript.dom.Window;
+import greencode.jscript.dom.elements.THElement;
+import greencode.jscript.dom.elements.TheadElement;
 import greencode.sengi.implementations.ElementEach;
 
 public class THead extends TheadElement{

@@ -1,10 +1,10 @@
 package greencode.sengi;
 
 import greencode.jscript.DOMHandle;
-import greencode.jscript.Element;
-import greencode.jscript.ElementHandle;
-import greencode.jscript.Window;
-import greencode.jscript.elements.InputCheckboxElement;
+import greencode.jscript.dom.Element;
+import greencode.jscript.dom.ElementHandle;
+import greencode.jscript.dom.Window;
+import greencode.jscript.dom.elements.InputCheckboxElement;
 
 public class Checkbox<T> extends InputCheckboxElement<T> {
 

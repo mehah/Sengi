@@ -1,9 +1,9 @@
 package greencode.sengi;
 
 import greencode.jscript.DOMHandle;
-import greencode.jscript.Element;
-import greencode.jscript.ElementHandle;
-import greencode.jscript.elements.SelectElement;
+import greencode.jscript.dom.Element;
+import greencode.jscript.dom.ElementHandle;
+import greencode.jscript.dom.elements.SelectElement;
 
 public class Select extends SelectElement {
 	
