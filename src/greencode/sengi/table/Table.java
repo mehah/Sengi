@@ -22,7 +22,7 @@ public class Table extends greencode.jscript.dom.elements.TableElement {
 	}
 	
 	public CaptionElement getCaption() {
-		return this.caption == null ? ElementHandle.cast(ElementHandle.getOrCreateElementByTagName(this, "caption"), CaptionElement.class) : this.caption;
+		return this.caption == null ? ElementHandle.cast(this.getOrCreateElementByTagName("caption"), CaptionElement.class) : this.caption;
 	}
 	
 	public String getTextCaption() {
@@ -35,14 +35,14 @@ public class Table extends greencode.jscript.dom.elements.TableElement {
 	}
 	
 	public THead getTHead() {
-		return this.thead == null ? ElementHandle.cast(ElementHandle.getOrCreateElementByTagName(this, "thead"), THead.class) : this.thead;
+		return this.thead == null ? ElementHandle.cast(this.getOrCreateElementByTagName("thead"), THead.class) : this.thead;
 	}
 	
 	public TBody getTBody() {
-		return this.tbody == null ? ElementHandle.cast(ElementHandle.getOrCreateElementByTagName(this, "tbody"), TBody.class) : this.tbody;
+		return this.tbody == null ? ElementHandle.cast(this.getOrCreateElementByTagName("tbody"), TBody.class) : this.tbody;
 	}
 	
 	public TFoot getTFoot() {
-		return this.tfoot == null ? ElementHandle.cast(ElementHandle.getOrCreateElementByTagName(this, "tfoot"), TFoot.class) : this.tfoot;
+		return this.tfoot == null ? ElementHandle.cast(this.getOrCreateElementByTagName("tfoot"), TFoot.class) : this.tfoot;
 	}
 }

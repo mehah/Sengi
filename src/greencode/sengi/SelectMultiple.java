@@ -5,7 +5,7 @@ import greencode.jscript.dom.Element;
 import greencode.jscript.dom.ElementHandle;
 import greencode.jscript.dom.elements.SelectElement;
 
-public class SelectMultiple extends SelectElement {
+public class SelectMultiple<T> extends SelectElement<T> {
 	
 	public SelectMultiple(Element e) {
 		super(DOMHandle.getWindow(e));		
@@ -13,10 +13,10 @@ public class SelectMultiple extends SelectElement {
 	}
 	
 	public void selectOptionByValue(Element e, String value) {
-		DOMHandle.execCommand(e, "customMethod.selectOptionByValue", value);
+		DOMHandle.execCommand(e, "selectOptionByValue", value);
 	}
 	
 	public void selectOptionByText(Element e, String text) {
-		DOMHandle.execCommand(e, "customMethod.selectOptionByText", text);
+		DOMHandle.execCommand(e, "selectOptionByText", text);
 	}
 }
