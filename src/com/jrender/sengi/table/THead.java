@@ -1,12 +1,13 @@
-package greencode.sengi.table;
+package com.jrender.sengi.table;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import greencode.jscript.dom.Window;
-import greencode.jscript.dom.elements.THElement;
-import greencode.jscript.dom.elements.TheadElement;
-import greencode.sengi.implementations.ElementEach;
+import com.jrender.sengi.implementations.ElementEach;
+
+import com.jrender.jscript.dom.Window;
+import com.jrender.jscript.dom.elements.THElement;
+import com.jrender.jscript.dom.elements.TheadElement;
 
 public class THead extends TheadElement{
 	private final List<TRHead> trs = new ArrayList<TRHead>();

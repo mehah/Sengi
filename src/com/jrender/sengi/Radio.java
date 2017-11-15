@@ -1,10 +1,10 @@
-package greencode.sengi;
+package com.jrender.sengi;
 
-import greencode.jscript.DOMHandle;
-import greencode.jscript.dom.Element;
-import greencode.jscript.dom.ElementHandle;
-import greencode.jscript.dom.Window;
-import greencode.jscript.dom.elements.InputRadioElement;
+import com.jrender.jscript.DOMHandle;
+import com.jrender.jscript.dom.Element;
+import com.jrender.jscript.dom.ElementHandle;
+import com.jrender.jscript.dom.Window;
+import com.jrender.jscript.dom.elements.InputRadioElement;
 
 public class Radio extends InputRadioElement {
 

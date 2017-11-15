@@ -1,6 +1,6 @@
-package greencode.sengi.implementations;
+package com.jrender.sengi.implementations;
 
-import greencode.jscript.dom.Element;
+import com.jrender.jscript.dom.Element;
 
 public interface ElementEach<E extends Element> {
 	public void each(E element);

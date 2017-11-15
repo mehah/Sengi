@@ -1,20 +1,21 @@
-package greencode.sengi.table;
+package com.jrender.sengi.table;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import greencode.jscript.dom.Window;
-import greencode.jscript.dom.elements.TDElement;
-import greencode.jscript.dom.elements.TbodyElement;
-import greencode.sengi.implementations.ElementEach;
+import com.jrender.sengi.implementations.ElementEach;
 
-public class TBody extends TbodyElement{
+import com.jrender.jscript.dom.Window;
+import com.jrender.jscript.dom.elements.TDElement;
+import com.jrender.jscript.dom.elements.TFootElement;
+
+public class TFoot extends TFootElement{
 	private final List<TR> trs = new ArrayList<TR>();
-	
-	protected TBody(Window window) {
+
+	protected TFoot(Window window) {
 		super(window);
 	}
-
+	
 	public TR createLine(int cols) {
 		return createLine(cols, null);
 	}
@@ -53,4 +54,5 @@ public class TBody extends TbodyElement{
 		
 		return tr;
 	}
+
 }

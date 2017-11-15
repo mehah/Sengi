@@ -1,12 +1,12 @@
-package greencode.sengi.table;
+package com.jrender.sengi.table;
 
-import greencode.jscript.DOMHandle;
-import greencode.jscript.dom.Element;
-import greencode.jscript.dom.ElementHandle;
-import greencode.jscript.dom.Window;
-import greencode.jscript.dom.elements.CaptionElement;
+import com.jrender.jscript.DOMHandle;
+import com.jrender.jscript.dom.Element;
+import com.jrender.jscript.dom.ElementHandle;
+import com.jrender.jscript.dom.Window;
+import com.jrender.jscript.dom.elements.CaptionElement;
 
-public class Table extends greencode.jscript.dom.elements.TableElement {
+public class Table extends com.jrender.jscript.dom.elements.TableElement {
 	private CaptionElement caption;
 	private THead thead;
 	private TBody tbody;

@@ -1,11 +1,11 @@
-package greencode.sengi.table;
+package com.jrender.sengi.table;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import greencode.jscript.dom.Window;
-import greencode.jscript.dom.elements.THElement;
-import greencode.jscript.dom.elements.TRElement;
+import com.jrender.jscript.dom.Window;
+import com.jrender.jscript.dom.elements.THElement;
+import com.jrender.jscript.dom.elements.TRElement;
 
 public class TRHead extends TRElement {
 	final List<THElement> tds = new ArrayList<THElement>();
